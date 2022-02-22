@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <meta name ="viewport" content = "width-device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="welcomeHomepage.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" lang="javascript" src="welcomeHomepage.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload="showSlides(4)">
+            <div class="w3-bar">
+                <div class="element">
+                    <div class ="account">Account <img src="../Images/Microsoft_Account.svg.png" width="40" height="40">       
+
+                    <div class="dropdown-content">
+                        <a href="../EditAccount/editAccount.php"> Edit Account </a>
+                        <a href="../EditPassword/editPassword.php"> Edit Password</a>
+                    </div>  
+                    </div>
+                </div>
+
+                <div class="logout_button">
+                    <a href=logout.php  class="element">Log Out</a>
+                </div>
+                
+                <input type="button" class="logo" id='btnHome'>
+                
+                <div class="menu">
+                    <a href="../Start visit/visit.php" class="element">Start visit or come back to your tour! 🗺️ </a>
+                    <a href ="../FindArtwork/findArtwork.html" class="element" >Look for an artwork 🔎</a>
+                    <a href ="../AddArtwork/addArtwork.php" class="element">Add an artwork 🖼️</a>
+                </div>
+            </div>
+
+        <br>
+        <br>
+        
+        <div class="slideshow-container">
+            <div class="info1" align="center">
+                    Welcome to smART wandering   
+                    <div class="info11" align="center">
+                        We are in Art what Spotify is in Music
+                    </div>
+            </div>
+
+          
+            <div class="mySlides fade">
+                
+                <img src="../Images/foto1.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                
+                <img src="../Images/gianicolo.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+               
+                <img src="../Images/castello.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+               
+                <img src="../Images/foto3.jpeg" style="width:100%">
+            </div>
+        </div>
+    
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+   
+            <br> 
+        <div class="info2">
+            This is a Web Application created to easly travel and visit Rome. 
+            <br>
+        </div>
+        <div class="how"> How to use it? 🤔 </div>
+        <br>
+        <br>
+        
+        <div class="buttons" align="center">
+            <a href="../Start visit/visit.php"> <input type="button" id="visit" value="Start a visit"> </a> 
+            <a href="../FindArtwork/findArtwork.html"> <input type="button" id="find" value="Look for an artwork"> </a> 
+            <a href="../AddArtwork/addArtwork.php"> <input type="button" id="add" value="Add an artwork"> </a> 
+        </div>
+        
+            <div class="start_text"> 🗺 Click on Start a visit and we will guide you on an itinerary based on your 
+                preferences and on the works most voted by users! You don't have to do anything except enjoy the tour! 
+            </div>
+            <div class="find_text"> 🔍 Have you already visited the suggested works and are you curious to discover new ones? 
+                Are you looking for anything in particular? No problem! Click on Look for an arwork to expand your knowledge!
+            </div>
+            <div class="add_text"> 📌 Do you want to add a new work to the list? Great!!! So also other users will
+                be able to discover it and vote for it!
+                click on Add Artwork! </div>
+        
+            <div class="container"> </div>
+            <div class="foto"></div>
+       
+            <div class="w3-footer_bar">
+                <div id="social_sez" class="social_sez">
+                    <h5>Follow us on:</h5>
+                    <a href="https://www.facebook.com/Smart-Wandering-106566171072452/" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/smartwanderinginrome/?hl=it" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-youtube-play"></a>
+                </div>
+
+                
+                    <div class="logo_sez" align="left">
+                        <img id="foto_logo_sez" src="../Images/sapienza.png" alt="logo sapienza">
+                    </div>
+                <div class="developers" class="footer_element">
+                        <a href="../AboutUs/aboutUs.php" class="footer_element" style="margin-left: 30px;">About Us</a>
+                        <a href="../ContactUs/contact_us.html" class="footer_element">Contact Us</a>
+                </div>
+                
+            
+            </div>
+        
+    </body>
+</html>

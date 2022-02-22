@@ -1,0 +1,197 @@
+body{
+    font-family: "Avenir",sans-serif;
+    font-style: normal;
+    background-size: cover;
+    background-color: #04001b;
+}
+p {
+    font-size: 18px;
+
+}
+
+.principale {
+    color:white;
+    position: absolute;
+    top: 200px;
+    left: 15%; 
+    background-color: #04001b6b;
+    border-radius: 10px;
+    width: 27cm;
+    height: 5cm;
+    z-index: 20;
+}
+.principale h1{
+    font-size: 60px;
+    font-family: "Avenir",sans-serif;
+}
+.principale h2{
+    font-size: 25px;
+    font-family: "signpainter" ;
+}
+.secondario{
+    position: absolute;
+    background-color: #04001b;
+    color: white;
+    text-align: center;
+    top: 460px;
+    left: 30%;
+    width: 22cm;
+    height: 4cm;
+    border-radius: 10px;
+}
+.image {
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    background-image: url("../Images/logo_scritta.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 13.5%;
+    top: 56%;
+}
+.video {
+    z-index: 10;
+    position: absolute;
+    top: -15%;
+}
+.buttons{
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    top: 600px;
+}
+.buttons input[type="button"]{
+    font-size: 18px;
+    text-align: center;
+    width: 180px;
+    height: 80px;;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-shadow: -1px -1px #000;
+    user-select: none;
+    padding: .8em 2em;
+    outline: none;
+    background-color: #000;
+    background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+    border-radius: 10px;
+}
+.buttons input[type="button"]:active {
+    top: 1px;
+    box-shadow: none;
+}
+.buttons input[type="button"]:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0;
+}
+.foto1 {
+    position: absolute;
+    height: 4cm;
+    width: 100%;
+    top: 105%;
+    background-size: 20%;
+    display: flex;
+    background-size: contain;
+}
+/*footer_bar*/
+.w3-footer_bar{
+    text-align: left;
+    background-color:#04001b;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;  
+    position: absolute;
+    bottom:-360px;
+} 
+
+/*social*/
+.social_sez {
+    width: 25%;
+    height: 150px;
+    float: right;
+    right:14%;
+    text-align: center;
+  }
+
+.social_sez h5{
+    font-family: "Avenir", sans-serif;
+    font-size: 18px;
+    color: white;  
+    text-align: center;
+}
+.fa {
+  padding: 10px; /*grandezza cerchio */
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;  /*top*/
+  text-decoration: none;
+  margin: 5px 2px 0 0;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-youtube-play {
+  background: #bb0000;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.logo_sez {
+    width: 35%;
+    height: 130px;
+    float: left;
+    left: 2%;
+    position: relative;
+    top: 15px;
+  }
+#foto_logo_sez {
+  width: 60%;
+  height: 65px;
+  margin: 2%;
+  width: 60%;
+}
+
+.footer_element{
+    color:white;
+    text-decoration:none; 
+    margin-bottom: 30px;
+    margin-right: 100px;
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+}
+.developers{
+    position: relative;
+    text-align: center;
+    right: 1.5%;
+    margin-top:1%;
+}
+
+.footer_element:hover{
+    color:rgb(72, 168, 247);
+    text-decoration:none;  
+}  
+  
+
+

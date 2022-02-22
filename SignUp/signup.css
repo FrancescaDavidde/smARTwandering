@@ -1,0 +1,319 @@
+body{
+    background-image: url("../Images/signup-foto.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    z-index: 10px;
+} 
+.w3-bar {
+    text-align: center;
+    background-color:#04001b;
+    margin-top: 0px;;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    font-size: 18px;
+    z-index: 50;
+}
+.logo{
+    background-image: url('../Images/logo_scritta.jpeg');
+    background-size: contain;
+    position: fixed;
+    left: 10px;
+    height: 75px;
+    width: 75px;
+    border-radius: 10px;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+}
+.signup{
+    z-index: 10;
+    background-color:whitesmoke;
+    opacity: 0.9;
+    height: fit-content;
+    width: 500px;
+    border-radius: 10px;
+    position: absolute;
+    left: 33%;
+    top: 110px;
+    text-align: center;
+    font-family: "Avenir", sans-serif;
+    font-size: 18px;
+}
+.signup .text1 {
+    font-family: "Avenir", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 0 0 45px rgba(0,0,0,.7);   
+ }
+ 
+ a {
+    font-weight: bolder;
+    color: royalblue;
+    text-decoration: none;
+    padding: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    word-wrap: normal;
+    display: inline-block;
+    background-size: 16px 16px;
+    padding-right: 19px;
+}
+
+a::after {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    content: '';
+    width: 100%;
+    background-color: green;
+    opacity: 0;
+    transition: .3s;
+}
+  
+a:hover::after {
+    bottom: 0;
+    opacity: 1;
+    color:rgb(72, 168, 247);
+}
+a:hover {
+    color: rgb(72, 168, 247);
+}
+
+.bottom {
+    position: relative;
+}
+
+.account {
+    font-weight: bold;
+}
+
+/* messaggio viene visualizzata quando l'utente fa click sul campo della password */
+#msg {
+    font-family: "Avenir";
+    font-size: 15px;
+    display: none;
+    background: white;
+    color: #000;
+    position: relative;
+}  
+/* aggiungo testo verde e checkmark quando i requisiti sono giusti */
+.valid {
+    color: green;
+}
+  
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+  
+/* aggiungo testo rosso e "x" quando i requisiti sono sbagliati */
+.invalid {
+    color: red;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+ /* stile form */
+ .signup input[type="text"],
+ .signup input[type="email"],
+ .signup input[type="password"],
+ .signup select {
+    font-family: "Avenir", sans-serif;
+    background: rgba(255,255,255,.1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+ }
+ .signup input[type="submit"]{
+    font-size: 18px;
+    text-align: center;
+    width: 180px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-shadow: -1px -1px #000;
+    user-select: none;
+    padding: .8em 2em;
+    outline: none;
+    background-color: #000;
+    background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+    border-radius: 10px;
+}
+.signup input[type="submit"]:active {
+    top: 1px;
+    box-shadow: none;
+}
+.signup input[type="submit"]:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0;
+}
+
+/* ELEMENTO SELECT */
+.custom-select {
+    position: relative;
+    font-family: "Avenir", sans-serif;
+    left: 150px;
+    border-radius: 10px;
+  }
+  
+.custom-select select {
+    display: none; 
+}
+  
+.select-selected {
+    background-color: rgb(77, 78, 82);
+    border-radius: 10px;
+}
+  
+/*stile freccia nella select*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+  
+ /*quando select è aperta(active)-->freccia punta su*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+  
+/*stile opzioni select (compreso l'elemento selezionato)*/  
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+  
+ /*stile opzioni*/
+.select-items {
+    position: absolute;
+    background-color: rgb(77, 78, 82);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 10px;
+}
+  
+ /*nascondi elementi quando select chiusa*/
+.select-hide {
+    display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+    background-color: rgb(72, 168, 247);
+    border-radius: 10px;;
+}
+
+.w3-footer_bar{
+    text-align: left;
+    background-color:#04001b;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;  
+    position: absolute;
+    bottom:-500px;
+} 
+
+/*social*/
+.social_sez {
+    width: 25%;
+    height: 150px;
+    float: right;
+    right:14%;
+    text-align: center;
+  }
+
+.social_sez h5{
+    font-family: "Avenir", sans-serif;
+    font-size: 18px;
+    color: white;  
+    text-align: center;
+}
+.fa {
+  padding: 10px; /*grandezza cerchio */
+  font-size: 40px;
+  width: 20px;
+  height: 20px;
+  text-align: center;  /*top*/
+  text-decoration: none;
+  margin: 5px 2px 0 0;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-youtube-play {
+  background: #bb0000;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.logo_sez {
+    width: 35%;
+    height: 120px;
+    float: left;
+    position: relative;
+    top: 15px;
+  }
+#foto_logo_sez {
+  width: 60%;
+  height: 70px;
+  margin: 2%;
+  width: 60%;
+}
+
+.footer_element{
+    color:white;
+    text-decoration:none; 
+    margin-bottom: 30px;
+    margin-right: 100px;
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+}
+.developers{
+    position: relative;
+    text-align: center;
+    right: 1.5%;
+    margin-top:1%;
+}
+
+.footer_element:hover{
+    color:rgb(72, 168, 247);
+    text-decoration:none;  
+}  
+  

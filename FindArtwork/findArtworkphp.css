@@ -1,0 +1,273 @@
+
+ .empty{
+      z-index: 5;
+      font-family: "Avenir";
+      font-size: 50px;
+      top: 310px;
+      left: 25%;
+      position: absolute;
+      color: white;
+      background-color: grey;
+      border-radius: 10px;
+      opacity: 90%;
+    }
+
+
+
+  body{
+      font-size: 18px;
+    }
+
+  .w3-bar {
+      font-family: "Avenir";
+      text-align: center;
+      background-color:#04001b;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      font-family: "Avenir", sans-serif;
+      font-size: 18px;
+      z-index: 20;
+    }
+ 
+  .menu{
+      margin-top: 22.5px;
+    }
+  
+  .element{
+      color:white;
+      text-decoration:none; 
+      margin-right: 22px; 
+      }
+ 
+  .element:hover{
+      color:rgb(72, 168, 247);
+      text-decoration:none;    
+     }
+ 
+  .account {
+      position: fixed; 
+      right: 60px;
+      margin-top: 19px;
+      font-size: 18px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 20;
+    }
+ 
+  .logout_button {
+      position: fixed;
+      right: 10px;
+      margin-top: 22.5px;
+      font-size: 18px;
+      } 
+      
+  .logo{
+      background-image: url('../Images/logo_scritta.jpeg');
+      background-size: contain;
+      position: fixed;
+      left: 10px;
+      height: 75px;
+      width: 75px;
+      border-radius: 10px;
+      top: 3px;
+      left: 3px;
+      }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 20;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      background-color: black;
+    }
+    
+  .dropdown-content a {            
+      text-decoration: none;
+      display: block;
+      background-color: rgb(42, 128, 226);
+      color: white;
+    }
+    
+    
+  .account:hover .dropdown-content {
+      display: block;
+    }
+    
+  a::after {
+      position: absolute;
+      bottom: .3em;
+      left: 0;
+      content: '';
+      width: 100%;
+      background-color: black;
+      opacity: 0;
+      transition: .3s;
+      }
+      
+  a:hover::after {
+      bottom: 0;
+      opacity: 1;
+      color: black;
+      }
+      
+  a:hover {
+      color: black;
+      }
+      
+  .developers {
+      position: fixed;
+      bottom: 106px;
+      right: 30%;
+      font-size: 18px;
+  }
+
+  /*footer bar*/
+  .footer_element{
+      color:white;
+      text-decoration:none; 
+      margin-bottom: 30px;
+      margin-right: 100px;
+      font-family: "Avenir", sans-serif;
+      font-size: 18px;
+    }
+ 
+  .footer_element:hover{
+      color:rgb(72, 168, 247);
+      text-decoration:none;  
+    }  
+ 
+  .footer {
+      position: absolute;
+      left: 0;
+      bottom: -1500px;
+      width: 100%;
+      height: 140px;
+      background-color: #04001b;
+      color: white;
+      text-align: center;
+  }
+ 
+  /*social*/
+  .social_sez {
+      width: 25%;
+      height: 120px;
+      float: right;
+    }
+
+  .social_sez h5{
+      font-family: "Avenir", sans-serif;
+      font-size: 18px;
+  }
+  
+  .fa {
+      padding: 10px; /*grandezza cerchio */
+      font-size: 40px;
+      width: 20px;
+      height: 20px;
+      text-align: center;  /*top*/
+      text-decoration: none;
+      margin: 5px 2px 0 0;
+      border-radius: 50%;
+    }
+  
+  .fa:hover {
+      opacity: 0.7;
+    }
+  
+  .fa-facebook {
+      background: #3B5998;
+      color: white;
+      height: 45px;
+      width: 45px;
+    }
+  .fa-instagram {
+      background: #125688;
+      color: white;
+      height: 45px;
+      width: 45px;
+    }
+  .fa-youtube-play {
+      background: #bb0000;
+      color: white;
+      height: 45px;
+      width: 45px;
+    }
+  
+  .logo_sez {
+      width: 35%;
+      height: 100px;
+      float: left;
+    }
+  
+  
+  #foto_logo_sez {
+      width: 60%;
+      height: 70px;
+      margin: 2%;
+      width: 60%;
+    }
+  
+  .developers{
+      left: 525px;
+      top: 10px;
+      position: absolute;
+  }
+
+  .link{
+      position: relative;
+      height: 2cm;
+      width: 3cm;
+      left: 20px;
+      top: 95px;
+      background-image: url(../Images/freccia.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  body{
+      font-family: "Avenir", sans-serif;
+      font-size: 25px;
+      background-image: url(../Images/roma_stelle.jpeg);
+      background-size: 100%;
+      background-attachment: fixed;
+      }
+
+
+  .tutto .scroll-top {
+      width: 75px;
+      height: 75px;
+      position:fixed; 
+      bottom: 35px;
+      right: 20px;
+      display: none;
+      }
+  .tutto .scroll-top i {
+      display: inline-block;
+      border-radius: 300px;
+      }
+
+  .tutto button[type="button"]{
+      width: 75px;
+      height: 75px;
+      position:fixed; 
+      bottom: 35px;
+      right: 20px;
+      display: none;
+      z-index: 100;
+      }
+
+  .tutto button[type="button"] i{
+      position: relative;
+      right: 10%;
+      top: -10px;
+      }
+
+  .delusa{
+      background-color: transparent;
+      border-color: transparent;
+      width: 2.5cm;
+      height: 2.5cm;
+    }
+

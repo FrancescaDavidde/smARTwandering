@@ -1,0 +1,379 @@
+
+.w3-bar {
+   text-align: center;
+   background-color:#04001b;
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+   z-index: 20;
+}
+
+.menu{
+   margin-top: 22.5px;
+ }
+
+.element{
+   color:white;
+   text-decoration:none; 
+   margin-right: 22px; 
+   }
+
+.element:hover{
+   color:rgb(72, 168, 247);
+   text-decoration:none;    
+   }
+
+.account {
+   position: fixed; 
+   right: 60px;
+   margin-top: 19px;
+   font-size: 18px;
+   height: 80px;
+   cursor: pointer;
+   z-index: 20;
+   }
+
+.logout_button {
+   position: fixed;
+   right: 10px;
+   margin-top: 22.5px;
+   font-size: 18px;
+   } 
+     
+.logo{
+   background-image: url('../Images/logo_scritta.jpeg');
+   background-size: contain;
+   position: fixed;
+   left: 10px;
+   height: 75px;
+   width: 75px;
+   border-radius: 10px;
+   top: 3px;
+   left: 3px;
+   }
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   z-index: 20;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   background-color: black;
+   }
+   
+.dropdown-content a {            
+   text-decoration: none;
+   display: block;
+   background-color: rgb(42, 128, 226);
+   color: white;
+   }
+   
+.account:hover .dropdown-content {
+   display: block;
+   }
+   
+a::after {
+   position: absolute;
+   bottom: .3em;
+   left: 0;
+   content: '';
+   width: 100%;
+   background-color: black;
+   opacity: 0;
+   transition: .3s;
+   }
+     
+a:hover::after {
+   bottom: 0;
+   opacity: 1;
+   color: black;
+   }
+     
+a:hover {
+   color: black;
+   }
+
+body{
+   font-size: 16px;
+   display:block;
+   overflow:auto;
+   width:100%;
+   background-attachment: scroll;
+   background-position: 24px;
+   background: url(../Images/libro3.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position-y: 3cm;
+   background-color: #04001b;
+   }
+
+.artwork_image{
+   border-radius: 10px;
+   position: relative;
+   width:  490px;
+   height: 300px;
+   display: inline-block;
+   vertical-align: text-bottom;
+   left: 126px;
+   top: -600px;
+   } 
+.artwork_snapshots{
+   border-radius: 10px;
+   width: 122px;
+   height: 110px;
+   position: relative;
+   left: -375px;
+   bottom: 430px;
+  } 
+
+.divText {
+   position: relative;    
+   display: inline-block;
+   top: 200px; 
+   left: 700px;
+   }
+
+.divText input[type="text"]{
+   font-family: "Avenir", sans-serif;
+   background: rgba(255, 255, 255, 0); 
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   width: 7cm;
+   border-radius: 10px;
+   }
+
+.nome {
+   background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   font-size: 30px;
+   font-weight: bold;
+   font-family: "signpainter";
+   } 
+
+label {
+   display: inline;
+   font-family: "signpainter";
+   font-size: 18px;
+   background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   }
+
+.checked {
+   background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   }
+
+.tutto{
+   position: absolute;
+}
+  
+.tutto img {
+   border-radius: 10px;
+   transition: 1s;
+   padding: 5px;
+   }
+  
+.tutto img:hover {
+   filter: grayscale(100%);
+   transform: scale(1.2);
+   }
+
+#category_selection{
+   border-color:  rgb(0, 140, 255);
+   }
+
+/* bottone delete*/
+.elimina input[type="button"]{
+   cursor: pointer;
+   width: 5cm;
+   height: 2.5cm;
+   font-size: 18px;
+   text-align: center;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   text-shadow: -1px -1px #000;
+   user-select: none;
+   padding: .8em ;
+   outline: none;
+   background-color: #000;
+   background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%, auto;
+   background-position: 200% 0, 0 0;
+   box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+   border-radius: 10px;
+   position: relative;
+   bottom: 208px;
+   left: 690px;
+   }
+   
+   
+   
+.elimina input[type="button"]:active {
+   box-shadow: none;
+   }
+   
+   
+   
+.elimina input[type="button"]:hover {
+   transition: .5s linear;
+   background-position: -200% 0, 0 0;
+   }
+
+/*bottone submit*/   
+.save input[type="submit"]{
+   cursor: pointer;
+   width: 5cm;
+   height: 2.5cm;
+   font-size: 18px;
+   text-align: center;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   text-shadow: -1px -1px #000;
+   user-select: none;
+   padding: .8em ;
+   outline: none;
+   background-color: #000;
+   background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%, auto;
+   background-position: 200% 0, 0 0;
+   box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+   border-radius: 10px;
+   left: 40%;
+   top: 300px;
+   }
+
+
+.save input[type="submit"]:active {
+   box-shadow: none;
+   }
+   
+   
+   
+.save input[type="submit"]:hover {
+   transition: .5s linear;
+   background-position: -200% 0, 0 0;
+   }
+
+.infos {
+   position: absolute;
+   right: 15%;
+   top: 20%;
+   }
+
+.more_infos {
+   font-family: 'Tahoma';
+   width: 220px;
+   }
+
+.valutation {
+   position: absolute;
+   right: 24%;
+   top: 65%;
+   }
+
+
+
+/*footer bar*/
+.footer_element .developers{
+   font-size: 18px;
+   }
+.footer_element{
+   color:white;
+   text-decoration:none; 
+   margin-bottom: 30px;
+   margin-right: 100px;
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+   }
+
+.footer_element:hover{
+   color:rgb(72, 168, 247);
+   text-decoration:none;  
+   }  
+
+.footer {
+   position: absolute;
+   left: 0;
+   bottom: -700px;
+   width: 100%;
+   height: 140px;
+   background-color: #04001b;
+   color: white;
+   text-align: center;
+   }
+
+/*social*/
+.social_sez {
+   width: 25%;
+   height: 120px;
+   float: right;
+   }
+
+.social_sez h5{
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+   }
+
+.fa {
+   padding: 10px; /*grandezza cerchio */
+   font-size: 40px;
+   width: 20px;
+   height: 20px;
+   text-align: center;  /*top*/
+   text-decoration: none;
+   margin: 5px 2px 0 0;
+   border-radius: 50%;
+   }
+
+.fa:hover {
+   opacity: 0.7;
+   }
+
+.fa-facebook {
+   background: #3B5998;
+   color: white;
+   height: 40px;
+   width: 40px;
+   }
+.fa-instagram {
+   background: #125688;
+   color: white;
+   height: 40px;
+   width: 40px;
+   }
+.fa-youtube-play {
+   background: #bb0000;
+   color: white;
+   height: 40px;
+   width: 40px;
+   }
+
+.logo_sez {
+   width: 35%;
+   height: 100px;
+   float: left;
+   }
+
+
+#foto_logo_sez {
+   width: 60%;
+   height: 70px;
+   margin: 2%;
+   width: 60%;
+   }
+
+.developers{
+   left: 525px;
+   top: 10px;
+   position: absolute;
+   }

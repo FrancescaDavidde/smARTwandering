@@ -1,0 +1,433 @@
+
+
+body{
+   font-size: 16px;
+   display:block;
+   overflow:auto;
+   width:100%;
+   background-attachment: scroll;
+   background-position: 24px;
+   background: url(../Images/libro3.jpeg);
+   height: 40cm;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position-y: 2.5cm;
+   margin-left: 0px;
+   background-color: #04001b;
+   
+}
+
+
+.w3-bar {
+   text-align: center;
+   background-color:#04001b;
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+   z-index: 20;
+}
+
+
+
+.menu, .back{
+   margin-top: 22.5px;
+ }
+
+.element{
+   color:white;
+   text-decoration:none; 
+   margin-right: 22px; 
+   }
+
+.element:hover{
+   color:rgb(72, 168, 247);
+   text-decoration:none;    
+    }
+
+.account {
+       position: fixed; 
+       right: 60px;
+       margin-top: 19px;
+       font-size: 18px;
+       height: 80px;
+       cursor: pointer;
+       z-index: 20;
+   }
+
+.logout_button {
+       position: fixed;
+       right: 10px;
+       margin-top: 22.5px;
+       font-size: 18px;
+     } 
+     
+.logo{
+       background-image: url('../Images/logo_scritta.jpeg');
+       background-size: contain;
+       position: fixed;
+       left: 10px;
+       height: 75px;
+       width: 75px;
+       border-radius: 10px;
+       top: 3px;
+       left: 3px;
+     }
+     .dropdown-content {
+       display: none;
+       position: absolute;
+       z-index: 20;
+       min-width: 160px;
+       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       background-color: black;
+   }
+   
+   .dropdown-content a {            
+       text-decoration: none;
+       display: block;
+       background-color: rgb(42, 128, 226);
+       color: white;
+   }
+   
+   
+   .account:hover .dropdown-content {
+       display: block;
+   }
+   
+   a::after {
+       position: absolute;
+       bottom: .3em;
+       left: 0;
+       content: '';
+       width: 100%;
+       background-color: black;
+       opacity: 0;
+       transition: .3s;
+     }
+     
+     a:hover::after {
+       bottom: 0;
+       opacity: 1;
+       color: black;
+     }
+     
+     a:hover {
+       color: black;
+     }
+
+
+.artwork_image{
+   border-radius: 10px;
+   position: relative;
+    width:  470px;
+    height: 320px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    left: 136px;
+    top: -410px;
+} 
+.artwork_snapshots{
+    border-radius: 10px;
+    width: 110px;
+    height: 80px;
+    position: relative;
+    left: -332px;
+    bottom: 320px;
+} 
+
+.divText {
+   position: relative;    
+   display: inline-block;
+   top: 220px; 
+   left: 687px;
+  
+ }
+
+ .infos {
+    position: relative;
+    top: -393px;
+    left: 688px;
+    cursor: pointer;
+ }
+
+ .more_infos {
+   
+   width: 450px;
+
+}
+
+ .valutation {
+   background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   font-weight: bold;
+   font-size: 18px;
+   right: 370px;
+   position: absolute;
+   bottom: 68px;
+   
+  
+ }
+
+
+
+   .divText .nome {
+      background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: "signpainter";
+      bottom: 300px;
+    } 
+
+ 
+
+ h3 {
+      display: inline;
+      font-family: "signpainter";
+      font-size: 18px;
+      background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+   }
+
+ .checked {
+   background: linear-gradient(to right, rgb(52, 52, 216), rgb(0, 140, 255));
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+ }
+
+ .developers {
+    position: fixed;
+    bottom: 20px;
+ }
+
+
+
+
+ .gallery{
+    position: absolute;
+ }
+
+ .gallery img {
+    border-radius: 10px;
+    transition: 1s;
+    padding: 5px;
+ }
+
+ .gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.2);
+ }
+
+ .rate{
+   position: relative;
+   left: 460px;
+   bottom: 300px;
+ }
+
+ #edit_btn{
+   font-family: "Avenir", sans-serif;
+   top: -50px;
+   left: 440px;
+   width: 10cm;
+   cursor: pointer;
+ }
+
+ h4{
+    font-family: "signpainter";
+    font-size: 35px;
+ }
+
+ .gallery input[type="button"]{
+   font-family: "Avenir", sans-serif;
+   background: rgba(77, 70, 70, 0.1);
+   border-top: none;
+   border-left: none;
+   border-right: none;
+} 
+
+.gallery #btninfo{
+   width: 11cm;
+   font-family: "Avenir", sans-serif;
+   background: rgba(77, 70, 70, 0.1);
+   border-top: none;
+   border-left: none;
+   border-right: none;
+} 
+
+
+
+.gallery input[type="button"]{
+   font-size: 18px;
+   text-align: center;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   text-shadow: -1px -1px #000;
+   user-select: none;
+   padding: .8em ;
+   outline: none;
+   background-color: #000;
+   background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%, auto;
+   background-position: 200% 0, 0 0;
+   box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+   border-radius: 10px;
+}
+
+
+
+.gallery input[type="button"]:active {
+   box-shadow: none;
+}
+
+
+
+.gallery input[type="button"]:hover {
+   transition: .5s linear;
+   background-position: -200% 0, 0 0;
+}
+
+.gallery #btninfo{
+   font-size: 18px;
+   text-align: center;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   text-shadow: -1px -1px #000;
+   user-select: none;
+   padding: .8em;
+   outline: none;
+   background-color: #000;
+   background-image: linear-gradient(45deg, rgb(64, 146, 240) 30%, rgba(48, 119, 185, 0.8), rgba(19, 119, 185, 0.856) 70%), radial-gradient(190% 100% at 50% 0%, rgb(72, 168, 247) 0%, rgba(72, 168, 247, 0.5) 50%,#04001b  50%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%, auto; 
+   background-position: 200% 0, 0 0;
+   box-shadow: rgba(57, 206, 226, 0.3) 0 2px 5px;
+   border-radius: 10px;
+}
+
+
+
+.gallery #btninfo:active {
+   box-shadow: none;
+}
+
+
+
+.gallery #btninfo:hover {
+   transition: .5s linear;
+   background-position: -200% 0, 0 0;
+}
+
+
+/*contiene valutatione e stelline*/
+.container{
+   font-family: "signpainter";
+   top:180px;
+   right: 550px;
+   position: relative;
+   text-align: center;
+}
+
+.stella{
+  width: 75px;
+  height: 75px;
+}
+
+ /*footer bar*/
+.footer_element{
+   color:white;
+   text-decoration:none; 
+   margin-bottom: 30px;
+   margin-right: 100px;
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+ }
+
+ .footer_element:hover{
+   color:rgb(72, 168, 247);
+   text-decoration:none;  
+ }  
+
+ .footer {
+   position: absolute;
+   left: 0;
+   bottom: -400px;
+   width: 145%;
+   height: 140px;
+   background-color: #04001b;
+   color: white;
+   text-align: center;
+}
+
+/*social*/
+.social_sez {
+ width: 25%;
+ height: 120px;
+ float: right;
+}
+
+.social_sez h5{
+   font-family: "Avenir", sans-serif;
+   font-size: 18px;
+}
+
+.fa {
+ padding: 10px; /*grandezza cerchio */
+ font-size: 40px;
+ width: 20px;
+ height: 20px;
+ text-align: center;  /*top*/
+ text-decoration: none;
+ margin: 5px 2px 0 0;
+ border-radius: 50%;
+}
+
+.fa:hover {
+ opacity: 0.7;
+}
+
+.fa-facebook {
+ background: #3B5998;
+ color: white;
+ height: 40px;
+ width: 40px;
+}
+.fa-instagram {
+ background: #125688;
+ color: white;
+ height: 40px;
+ width: 40px;
+}
+.fa-youtube-play {
+ background: #bb0000;
+ color: white;
+ height: 40px;
+ width: 40px;
+}
+
+.logo_sez {
+ width: 35%;
+ height: 100px;
+ float: left;
+}
+
+
+#foto_logo_sez {
+ width: 60%;
+ height: 70px;
+ margin: 2%;
+ width: 60%;
+}
+
+.developers{
+   left: 525px;
+   top: 10px;
+   position: absolute;
+}
+

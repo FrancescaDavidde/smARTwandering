@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head><title>Log In</title>
+        <link rel="stylesheet" type='text/css' href="login.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" lang="javascript" src="login.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="w3-bar">
+            <input type="button" class="logo" onclick="location.href='../HomePage/homePage.html'">
+        </div>
+
+        <div class="login">
+            <br>
+            <span class="text1">
+                Log in
+            </span>
+            <br>
+            <br>
+            <form action="login.php" method="post" id="users" name="login" onsubmit="return message()">
+                <input type="email" id="name" name="e-mail" placeholder="E-mail" size="30" maxlength="30" required autofocus>
+                <br>
+                <br>
+                <input type="password" id="password" name="password" placeholder="Password" size="30" maxlength="30"required autofocus>
+                <br>
+                <br>
+                <input type="checkbox" id="remember" name="remember" paceholder="Remember Me" autofocus>
+                <label for="remember me"> Remember me</label>
+                <br>
+                <br>
+                <input type="submit" id="login" name="loginButton" value="Log In" required>
+                <br>
+            </form>
+            <br>
+            🗝️<a href="../ForgottenPassword/forgottenPassword.html">Forgot your password?</a> 
+            <br> <br>
+            <div class='noaccount'> Don't have an account? </div>
+            <a href="../SignUp/signup.html">Sign Up</a>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="footer">
+            <div id="social_sez" class="social_sez">
+                <h5>Follow us on:</h5>
+                <a href="https://www.facebook.com/Smart-Wandering-106566171072452/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/smartwanderinginrome/?hl=it" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube-play"></a>
+            </div>
+
+            <div class="logo_sez" align="left">
+                <img id="foto_logo_sez" src="../Images/sapienza.png" alt="logo sapienza">
+            </div>
+
+            <div class="developers" align="center">
+                    <a href="../AboutUs/aboutUs.php" class="footer_element">About Us</a>
+            </div>
+        </div>
+    </body>
+</html>

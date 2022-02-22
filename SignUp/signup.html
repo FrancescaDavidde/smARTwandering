@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="signup.css">
+        <script type="text/javascript" lang="javascript" src="signup.js">
+        </script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <div class="prova">
+    <body>  
+    <div class="w3-bar">
+        <input type="button" class="logo" onclick="location.href='../HomePage/homePage.html'">        
+    </div>
+    <div class="signup" align="center">
+        <form action="signup.php" method="POST" id="users" name="signup">
+                <br>
+                <span class="text1">
+                    Sign up
+                </span>
+                <br>
+                <br>
+                <input type="text" id="name" name="name" placeholder="Name" size="30" maxlength="30" required autofocus>
+                <br>
+                <input type="text" id="cognome" name="surname" placeholder="Surname"size="30" maxlength="30"  required>
+                <br>
+                <br>
+                <div class="custom-select" style="width:200px;">
+                <select id="category" name="category">
+                    <option value="Categories">Favorite categories
+                    <option value="Architecture">Architecture
+                    <option value="Painting">Painting  
+                    <option value="Sculpture">Sculpture
+                </select>                  
+                </div>
+                </br>
+                <br>
+                <input type="text" id="username"  name="username" placeholder="Username" size="30" maxlength="30"required>
+                <br>
+                <input type="email" id="e-mail" name="e-mail" placeholder="E-mail" size="30" maxlength="30"required>
+                <br>
+                <br>
+                <input type="password" id="password" name="password" placeholder="Password" pattern= "(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}"
+                        size="30" maxlength="30" required
+                        onfocus="return onPassword();" onblur="return outPassword();" onkeyup="return writePassword();"> 
+                <br>
+                <div id="msg">
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="special" class="invalid">A <b> special</b> character</p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <input type="password" id="password1" name="password1" placeholder="Confirm your password" 
+                    size="30" maxlength="30" required onchange="return validatePassword();">
+                <br>
+                <br>
+                <br>
+                <input type="submit" class='submit' id="signup" name="signupButton" value="Sign Up">
+                <br>
+                <br>
+                <div class='account'> Do you have already an account? </div>
+                <a href="../Login/login.html">Log In</a>
+                <br>
+                <br>
+        </form>
+    </div>
+   
+    <div class="w3-footer_bar">
+      <div id="social_sez" class="social_sez" text-align="center">
+        <h5>Follow us on:</h5>
+          <a href="https://www.facebook.com/Smart-Wandering-106566171072452/" class="fa fa-facebook"></a>
+          <a href="https://www.instagram.com/smartwanderinginrome/?hl=it" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube-play"></a>
+      </div>
+
+      <div class="logo_sez" align="left">
+        <img id="foto_logo_sez" src="../Images/sapienza.png" alt="logo sapienza">
+      </div>
+      <div class="developers">
+        <a href="../AboutUs/aboutUs.php" class="footer_element" style="margin-left: 30px;">About Us</a>
+      </div>       
+    </div>
+ 
+    <script>
+      var selectitems, i, j, selectelem, divElem, itemElem, divItem;
+       // seleziona tutti gli elementi del div
+       selectitems = document.getElementsByClassName("custom-select");
+       for (i = 0; i < selectitems.length; i++) {
+         selectelem = selectitems[i].getElementsByTagName("select")[0];
+         // per ogni select creo un div che si comporta come l'elemento stesso
+         divElem = document.createElement("DIV");
+         divElem.setAttribute("class", "select-selected");
+         divElem.innerHTML = selectelem.options[selectelem.selectedIndex].innerHTML;
+         // la select in questione deve essere figlia della select iniziale (se stessa)
+         selectitems[i].appendChild(divElem);
+         itemElem = document.createElement("DIV");
+         itemElem.setAttribute("class", "select-items select-hide");
+         // per ogni elemento di questa select creo un div che si comporti come l'elemento selezionato
+         for (j = 1; j < selectelem.length; j++) {
+           divItem = document.createElement("DIV");
+           divItem.innerHTML = selectelem.options[j].innerHTML;
+           divItem.addEventListener("click", function(e) {
+               // quando si clicca su un elemento deve essere aggiornato sia l'elemento che la select originale
+               var y, i, k, parent, sibling;
+               parent = this.parentNode.parentNode.getElementsByTagName("select")[0];
+               sibling = this.parentNode.previousSibling;
+               for (i = 0; i < parent.length; i++) {
+                 if (parent.options[i].innerHTML == this.innerHTML) {
+                   parent.selectedIndex = i;
+                   sibling.innerHTML = this.innerHTML;
+                   y = this.parentNode.getElementsByClassName("same-as-selected");
+                   for (k = 0; k < y.length; k++) {
+                     y[k].removeAttribute("class");
+                   }
+                   this.setAttribute("class", "same-as-selected");
+                   break;
+                 }
+               }
+               sibling.click();
+           });
+           itemElem.appendChild(divItem);
+         }
+         selectitems[i].appendChild(itemElem);
+         divElem.addEventListener("click", function(e) {
+             // quando la select viene cliccata chiudo ogni altra select aperta ed apro solo questa
+             e.stopPropagation();
+             closeAllSelect(this);
+             this.nextSibling.classList.toggle("select-hide");
+             this.classList.toggle("select-arrow-active");
+           });
+       }
+       function closeAllSelect(elmnt) {
+         // chiudo tutti gli elementi aperti in altre select ad eccezione dell'elemento corrente
+         var selectitems, y, i, arrNo = [];
+         selectitems = document.getElementsByClassName("select-items");
+         y = document.getElementsByClassName("select-selected");
+         for (i = 0; i < y.length; i++) {
+           if (elmnt == y[i]) {
+             arrNo.push(i)
+           } else {
+             y[i].classList.remove("select-arrow-active");
+           }
+         }
+         for (i = 0; i < selectitems.length; i++) {
+           if (arrNo.indexOf(i)) {
+             selectitems[i].classList.add("select-hide");
+           }
+         }
+       }
+       // chiudo tutto sel l'utente clicca fuori da qualsiasi box
+       document.addEventListener("click", closeAllSelect);
+       </script>     
+    </body>
+  </div>
+    <br>
+    <br>
+</html>

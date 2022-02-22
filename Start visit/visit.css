@@ -1,0 +1,371 @@
+html, body, h1, h3, h4 {
+    font-family: "Avenir", sans-serif;
+}
+body {
+    z-index: 10;;
+}
+.w3-bar {
+    text-align: center;
+    background-color: #04001b;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Avenir",sans-serif;
+    z-index: 80;
+}
+.menu{
+  margin-top: 22.5px;
+  font-weight: normal;
+  font-family: "Avenir",sans-serif;
+}
+.element{
+  color:white;
+  text-decoration:none; 
+  margin-right: 22px; 
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Avenir",sans-serif;
+}
+.element:hover{
+  color:rgb(72, 168, 247);
+  text-decoration:none;    
+}
+.account {
+  position: fixed; 
+  right: 60px;
+  margin-top: 19px;
+  font-size: 18px;
+  height: 80px;
+  cursor: pointer;
+}
+.logo{
+  background-image: url('../Images/logo_scritta.jpeg');
+  background-size: contain;
+  position: fixed;
+  left: 10px;
+  height: 75px;
+  width: 75px;
+  border-radius: 10px;
+  top: 3px;
+  left: 3px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: black;
+}
+.dropdown-content a {            
+    text-decoration: none;
+    display: block;
+    background-color: rgb(42, 128, 226);
+    color: white;
+}
+.account:hover .dropdown-content {
+    display: block;
+}
+a::after {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    content: '';
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: .3s;
+}  
+a:hover::after {
+    bottom: 0;
+    opacity: 1;
+    color: black;
+}
+  
+a:hover {
+    color: black;
+}
+.text1 {
+    color: rgb(171, 45, 202);
+    position: absolute;
+    font-family: "Avenir", sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 100px;;
+    margin-left: 36.5%;
+}
+.text2 {
+    position: absolute;
+    font-family: "Avenir", sans-serif;  
+    font-weight: bolder;
+    font-size: 20px; 
+    width: 250px;
+    margin-top: 14%;
+    margin-left: 1%;
+}
+.text3 {
+    color: black;
+    position: absolute;
+    font-family: "Avenir", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 30%;
+}
+
+#map {
+    position: absolute;
+    right: 20%;
+    height: 60%;
+    width: 60%;
+    top: 30%;
+    z-index: 20;;
+}
+
+.timeperiod{
+    position: absolute;
+    right: 30%;
+    top: 21.5%;
+    z-index: 70;
+}
+.timeperiod .time{
+    border-radius: 10px;
+    border-color: blue;
+    background-color: transparent;
+    width: 4cm;
+    height: 1cm;
+    font-size: 18px;
+}
+
+.map-navigator{
+    position: absolute;
+    right: 1.2%;
+    top: 28%;
+}
+.show {
+    position: absolute;
+    left: 20%;
+    top: 90%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(171, 45, 202);
+}
+.suggestions {
+    position: absolute;
+    left: 3%;
+    top: 36%;
+    font-size: 16px;
+    text-align: center;
+    height: 10cm;
+    width: 5cm;
+    cursor: pointer;
+}
+.suggestions a:hover {
+    color:rgb(72, 168, 247);   
+}
+.overlay-container{
+    background-color: #555;
+    width: 150px;
+    color: #fff;
+    text-align: center;
+    border-radius: 1px;
+    padding: 2px 0;
+    position:  absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.overlay-container #authorname::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #555 transparent transparent
+}
+
+/* animazione bottone con JQuery*/
+
+.button{
+    display: inline-block;
+    width: 245px;
+    height: 40px;
+    border: 2px solid #1521c2;;
+    color: #1521c2;
+    font-family: "Avenir";
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+button:disabled {
+    border: 2px solid #3a363d;
+    color: #3a363d;
+}
+
+.active{
+    margin-left: 46%;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate 1.4s ease 0.5s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.success{
+    position: absolute;
+    border: steelblue;
+    background-color: #fff;
+    animation: bounce .3s ease-in;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(0.9);
+    }
+}
+.success:before{
+    content: '';
+    position: absolute;
+    background: url("../ContactUs/assets/check-solid.svg") no-repeat;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    top: 8px;
+}
+
+.tourbutton{
+    display: inline-block;
+    width: 380px;
+    height: 70px;
+    border: 2px solid rgb(171, 45, 202);
+    color: rgb(171, 45, 202);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    transition: all ease 0.5s;
+    position: absolute;
+    left: -260%;
+    cursor: pointer;
+}
+/*footer_bar*/
+.w3-footer_bar{
+    text-align: left;
+    background-color:#04001b;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;  
+    position: absolute;
+    bottom:-300px;
+} 
+
+/*social*/
+.social_sez {
+    width: 25%;
+    height: 150px;
+    float: right;
+    right:14%;
+    text-align: center;
+  }
+
+.social_sez h5{
+    font-family: "Avenir", sans-serif;
+    font-size: 18px;
+    color: white;  
+    text-align: center;
+}
+.fa {
+  padding: 10px; /*grandezza cerchio */
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;  /*top*/
+  text-decoration: none;
+  margin: 5px 2px 0 0;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-youtube-play {
+  background: #bb0000;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.logo_sez {
+    width: 35%;
+    height: 130px;
+    float: left;
+    position: relative;
+    top: 15px;
+  }
+#foto_logo_sez {
+  width: 60%;
+  height: 65px;
+  margin: 2%;
+  width: 60%;
+}
+
+.footer_element{
+    color:white;
+    text-decoration:none; 
+    margin-bottom: 30px;
+    margin-right: 100px;
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+}
+.developers{
+    position: relative;
+    text-align: center;
+    right: 1.5%;
+    margin-top:1%;
+}
+
+.footer_element:hover{
+    color:rgb(72, 168, 247);
+    text-decoration:none;  
+}  
+  

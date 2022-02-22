@@ -1,0 +1,309 @@
+body{
+    background-color: #04001b;
+    background-size: 100%;
+}
+.div_text{  
+    position: relative;
+    font-family: "Avenir", sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    left: 250px;
+    top: 195px;
+}
+.text2{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-family: "Avenir", 'sans-serif';
+    font-size: 18px;;
+    top: 40%;
+    left: 9%;
+}
+.text2 p{
+    background-color: rgb(42, 128, 226);
+    border-radius: 10px;
+    width: 10cm;
+    position: relative;
+    left: 11%;
+}
+.area{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../Images/Why-Direct-Mail-Still-Works-in-Digital-World.gif");
+    opacity: 0.8;
+    font-size: 22px;
+    color: #04001b;
+    border-radius: 21px;;
+    border-color: rgb(57, 166, 255);
+    position: absolute;
+    left: 55%;
+    top: 25%;
+    font-family: "signpainter";
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.w3-bar {
+    text-align: center;
+    background-color:#04001b;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    font-size: 18px;
+    z-index: 30;;
+}
+.menu{
+  margin-top: 22.5px;
+}
+.element{
+  color:white;
+  text-decoration:none; 
+  margin-right: 22px; 
+  }
+.element:hover{
+  color:rgb(72, 168, 247);
+  text-decoration:none;    
+  }
+.account {
+  position: fixed; 
+  right: 60px;
+  margin-top: 19px;
+  font-size: 18px;
+  height: 80px;
+  cursor: pointer;
+}
+.logo{
+  background-image: url('../Images/logo_scritta.jpeg');
+  background-size: contain;
+  position: fixed;
+  left: 10px;
+  height: 75px;
+  width: 75px;
+  border-radius: 10px;
+  top: 3px;
+  left: 3px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: black;
+}
+.dropdown-content a {            
+    text-decoration: none;
+    display: block;
+    background-color: rgb(42, 128, 226);
+    color: white;
+}
+.account:hover .dropdown-content {
+    display: block;
+}
+a::after {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    content: '';
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: .3s;
+}  
+a:hover::after {
+    bottom: 0;
+    opacity: 1;
+    color: black;
+}
+  
+a:hover {
+    color: black;
+}
+
+/*animazione bottone con JQuery */
+.button{
+    display: inline-block;
+    width: 220px;
+    height: 60px;
+    border: 2px solid #fcfcfd;;
+    color: #f5f5f8;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 56px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+    transition: all ease 0.5s;
+    position:absolute;
+    top:58%;
+    left: 18%;
+}
+
+.button[disabled=disabled], button:disabled {
+    border: 1px solid #a51515;
+    background-color: #a51515;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.active{
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate 1.4s ease 0.5s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.success{
+    position: absolute;
+    top: 58%;
+    border: steelblue;
+    background-color: #fff;
+    animation: bounce .3s ease-in;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(0.9);
+    }
+}
+.success:before{
+    content: '';
+    position: absolute;
+    background: url("./assets/check-solid.svg") no-repeat;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    top: 8px;
+}
+
+.failure{
+    position: relative;
+    border: steelblue;
+    background-color: #fff;
+    animation: bounce .3s ease-in;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(0.9);
+    }
+}
+.failure:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    top: 8px;
+}
+/*footer_bar*/
+.w3-footer_bar{
+    text-align: left;
+    background-color:#04001b;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;  
+    position: absolute;
+    bottom:-60px;
+} 
+
+/*social*/
+.social_sez {
+    width: 25%;
+    height: 150px;
+    float: right;
+    right:14%;
+    text-align: center;
+  }
+
+.social_sez h5{
+    font-family: "Avenir", sans-serif;
+    font-size: 18px;
+    color: white;  
+    text-align: center;
+}
+.fa {
+  padding: 10px; /*grandezza cerchio */
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;  /*top*/
+  text-decoration: none;
+  margin: 5px 2px 0 0;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.fa-youtube-play {
+  background: #bb0000;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+.logo_sez {
+    width: 35%;
+    height: 130px;
+    float: left;
+    position: relative;
+    top: 15px;
+  }
+#foto_logo_sez {
+  width: 60%;
+  height: 65px;
+  margin: 2%;
+  width: 60%;
+}
+
+.footer_element{
+    color:white;
+    text-decoration:none; 
+    margin-bottom: 30px;
+    margin-right: 100px;
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+}
+.developers{
+    position: relative;
+    text-align: center;
+    right: 1.5%;
+    margin-top:1%;
+}
+
+.footer_element:hover{
+    color:rgb(72, 168, 247);
+    text-decoration:none;  
+}  
+  

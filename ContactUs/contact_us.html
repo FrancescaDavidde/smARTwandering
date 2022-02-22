@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
+        <link rel="stylesheet" href="contact_us.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+
+        <script src="contact_us.js"></script>
+        <title>Contact Us</title>
+
+        <script>
+            var sended = false;
+        </script>
+
+    </head>
+    <body>
+        <!-- menu bar -->
+        <div class="w3-bar">
+            <div class="element">
+                <div class ="account">Account <img src="../Images/Microsoft_Account.svg.png" width="40" height="40">       
+                    <div class="dropdown-content">
+                        <a href="../EditAccount/editAccount.php"> Edit Account </a>
+                        <a href="../EditPassword/editPassword.php"> Edit Password</a>
+                    </div>  
+                </div>
+            </div>     
+            <input type="button" class="logo" id='btnHome' onclick='return back_to_home()'>
+                    
+            <div class="menu">
+                <a href="../Start visit/visit.php" class="element">Start visit or come back to your tour! 🗺️ </a>
+                <a href ="../FindArtwork/findArtwork.html" class="element" >Look for an artwork 🔎</a>
+                <a href ="../AddArtwork/addArtwork.php" class="element">Add an artwork 🖼️</a>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class='container'>
+            <div class='div_text'>
+                Contact Us
+            </div>
+            <div class="text2">
+                Hi, do you need information or do you want to contact us? <br>
+                You can write to us by filling out the form or send us an email at <br>
+                <p>smARTwanderingInRome@gmail.com</p>
+            </div>
+        <textarea class="area" id="contact_area" rows="13" cols="50" placeholder=" ✏️  type your message here..."></textarea><br>
+        <button type='button' class='button' value='Submit' onclick="return send_email()">Submit</button>
+        </div>
+
+        <!-- footer bar -->
+        <div class="w3-footer_bar">
+            <div id="social_sez" class="social_sez" text-align="center">
+              <h5>Follow us on:</h5>
+                <a href="https://www.facebook.com/Smart-Wandering-106566171072452/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/smartwanderinginrome/?hl=it" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube-play"></a>
+            </div>
+      
+            <div class="logo_sez" align="left">
+              <img id="foto_logo_sez" src="../Images/sapienza.png" alt="logo sapienza">
+            </div>
+            <div id='dev' class="developers">
+              <a href="../AboutUs/aboutUs.php" id='fe1' class="footer_element" style="margin-left: 30px;">About Us</a>
+            </div>       
+          </div>
+
+        <!-- Jquery CDN Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+	
+            $(document).ready(function(){
+                $(".button").click(function(){
+                    $(this).addClass("active");
+            
+                    //aggiungi classe "success" dopo 3.7s
+                    setTimeout(function(){
+                        if (sended) {
+                            $(".button").addClass("success")
+                            //alert("Thank you your email was sended successfully!")
+                            sended = false
+                        }  
+                        else {
+                            $(".button").addClass("failure")
+                            alert("Something went wrong 😕")
+                        }         
+                    }, 3700);
+            
+                    //rimuovi la classe dopo 5s
+                    setTimeout(function(){
+                        $(".button").removeClass("active");
+                        $(".button").removeClass("success");
+                        $(".button").removeClass("failure");
+                    }, 5000);
+                });
+            });
+            
+        </script>
+
+    </body>
+</html>

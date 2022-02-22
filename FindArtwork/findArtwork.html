@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Find Artwork</title>
+        <meta name ="viewport" content = "width-device-width, initial-scale=1"/>
+        <script type='text/javascript' src='findArtwork.js'></script>
+        <link rel ="stylesheet" href="findArtwork.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+     
+      <!-- menu bar -->
+        <div class="w3-bar">
+            <div class="element">
+                <div class ="account">Account <img src="../Images/Microsoft_Account.svg.png" width="40" height="40">       
+
+                <div class="dropdown-content">
+                    <a href="../EditAccount/editAccount.php"> Edit Account </a>
+                    <a href="../EditPassword/editPassword.php"> Edit Password</a>
+                </div>  
+                </div>
+            </div>
+
+            
+            <input type="button" class="logo" id='btnHome' onclick="location.href='../WelcomeHomepage/welcomeHomepage.html'">
+            
+            <div class="menu">
+                <a href="../Start visit/visit.php" class="element">Start visit or come back to your tour! 🗺️ </a>
+                <a href ="../FindArtwork/findArtwork.html" class="element" >Look for an artwork 🔎</a>
+                <a href ="../AddArtwork/addArtwork.php" class="element">Add an artwork 🖼️</a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class ="search" align="center">
+           <h1>What are you looking for? 🔍</h1>
+            <br>
+            <br>
+            <form action="findArtwork.php" method="POST" name="findArtwork" onsubmit="find_artwork()">
+                <div class="custom-select" style="width:200px;">
+                    <select id="category" name="category">
+                        <option value = "choose"> Choose a category
+                        <option value = "all"> All
+                        <option value = "painting"> Painting 
+                        <option value = "sculpture"> Sculpture 
+                        <option value = "architecture"> Architecture 
+                        <option value = "star"> * star
+                    </select>
+                </div>
+                <div class="tool">
+                  <a href="#" data-toggle="tooltip" data-placement="right" title="If youd don't know the category choose 'All' 😊">❓</a>
+                </div>
+                
+            <br>
+            <input type="search" name="searchName" size="40" placeholder="Search by artwork name">
+            <br>
+            <br>
+            <input type="search" name="searchAuthor" size="40" placeholder="Search by author">
+            <br>
+            <br>
+                <input type="submit" id="search_btn" value="Search">
+            </form>
+        </div> 
+
+       <!-- footer bar -->
+        <div class="footer">
+            <div id="social_sez" class="social_sez">
+                <h5>Follow us on:</h5>
+                <a href="https://www.facebook.com/Smart-Wandering-106566171072452/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/smartwanderinginrome/?hl=it" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube-play"></a>
+            </div>
+
+            
+                <div class="logo_sez" align="left">
+                    <img id="foto_logo_sez" src="../Images/sapienza.png" alt="logo sapienza">
+                </div>
+            <div class="developers" class="footer_element">
+                    <a href="../AboutUs/aboutUs.php" class="footer_element">About Us</a>
+                    <a href="../ContactUs/contact_us.html" class="footer_element">Contact Us</a>
+            </div>
+           
+        </div>
+        <script>
+           var selectitems, i, j, selectelem, divElem, itemElem, divItem;
+            // seleziona tutti gli elementi del div
+            selectitems = document.getElementsByClassName("custom-select");
+            for (i = 0; i < selectitems.length; i++) {
+              selectelem = selectitems[i].getElementsByTagName("select")[0];
+              // per ogni select creo un div che si comporta come l'elemento stesso
+              divElem = document.createElement("DIV");
+              divElem.setAttribute("class", "select-selected");
+              divElem.innerHTML = selectelem.options[selectelem.selectedIndex].innerHTML;
+              // la select in questione deve essere figlia della select iniziale (se stessa)
+              selectitems[i].appendChild(divElem);
+              itemElem = document.createElement("DIV");
+              itemElem.setAttribute("class", "select-items select-hide");
+              // per ogni elemento di questa select creo un div che si comporti come l'elemento selezionato
+              for (j = 1; j < selectelem.length; j++) {
+                divItem = document.createElement("DIV");
+                divItem.innerHTML = selectelem.options[j].innerHTML;
+                divItem.addEventListener("click", function(e) {
+                    // quando si clicca su un elemento deve essere aggiornato sia l'elemento che la select originale
+                    var y, i, k, parent, sibling;
+                    parent = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sibling = this.parentNode.previousSibling;
+                    for (i = 0; i < parent.length; i++) {
+                      if (parent.options[i].innerHTML == this.innerHTML) {
+                        parent.selectedIndex = i;
+                        sibling.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        for (k = 0; k < y.length; k++) {
+                          y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                      }
+                    }
+                    sibling.click();
+                });
+                itemElem.appendChild(divItem);
+              }
+              selectitems[i].appendChild(itemElem);
+              divElem.addEventListener("click", function(e) {
+                  // quando la select viene cliccata chiudo ogni altra select aperta ed apro solo questa
+                  e.stopPropagation();
+                  closeAllSelect(this);
+                  this.nextSibling.classList.toggle("select-hide");
+                  this.classList.toggle("select-arrow-active");
+                });
+            }
+            function closeAllSelect(elmnt) {
+              // chiudo tutti gli elementi aperti in altre select ad eccezione dell'elemento corrente
+              var selectitems, y, i, arrNo = [];
+              selectitems = document.getElementsByClassName("select-items");
+              y = document.getElementsByClassName("select-selected");
+              for (i = 0; i < y.length; i++) {
+                if (elmnt == y[i]) {
+                  arrNo.push(i)
+                } else {
+                  y[i].classList.remove("select-arrow-active");
+                }
+              }
+              for (i = 0; i < selectitems.length; i++) {
+                if (arrNo.indexOf(i)) {
+                  selectitems[i].classList.add("select-hide");
+                }
+              }
+            }
+            // chiudo tutto sel l'utente clicca fuori da qualsiasi box
+            document.addEventListener("click", closeAllSelect);
+            </script>  
+           
+    </body>
+</html>
